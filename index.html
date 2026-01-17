@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Waamara Design — Creative Solutions</title>
+  <meta name="description" content="Waamara Design — high-performance, responsive creative design agency landing page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Waamara<span class="accent">Design</span></a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+
+        <button id="mobile-toggle" class="btn icon-btn mobile-only" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-hidden="true">
+      <div class="drawer-inner">
+        <button id="mobile-close" class="btn icon-btn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        <nav class="drawer-nav" aria-label="Mobile navigation">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Creative design that elevates brands.</h1>
+          <p class="lead">We craft clean, memorable experiences for modern products — strategy, branding, and web design with performance in mind.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Start a Project</a>
+            <a class="btn ghost" href="#portfolio">View Work</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-placeholder.jpg" alt="" width="640" height="420" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services" aria-label="Services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Brand Strategy</h3>
+            <p>Position, messaging, and identity systems that connect with your audience.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-pencil-ruler"></i></div>
+            <h3>UX & UI Design</h3>
+            <p>Human-centered interfaces with pixel-perfect visuals and accessibility baked in.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Front-end Development</h3>
+            <p>High-performance, responsive websites built with modern web standards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio" aria-label="Portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="filters" role="tablist" aria-label="Filter portfolio">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="branding" aria-pressed="false">Branding</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" data-filter="illustration" aria-pressed="false">Illustration</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <article class="portfolio-item" data-category="branding">
+            <img src="assets/portfolio-1.jpg" alt="Branding project preview" loading="lazy">
+            <div class="portfolio-meta">
+              <h4>Nova Brand System</h4>
+              <p>Visual identity & guidelines</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item" data-category="web">
+            <img src="assets/portfolio-2.jpg" alt="Website project preview" loading="lazy">
+            <div class="portfolio-meta">
+              <h4>Pulse — Product Landing</h4>
+              <p>Design + front-end build</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item" data-category="illustration">
+            <img src="assets/portfolio-3.jpg" alt="Illustration project preview" loading="lazy">
+            <div class="portfolio-meta">
+              <h4>Icon Set</h4>
+              <p>Custom icons and illustrations</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item" data-category="web">
+            <img src="assets/portfolio-4.jpg" alt="Website project preview" loading="lazy">
+            <div class="portfolio-meta">
+              <h4>Atlas Agency Site</h4>
+              <p>Performance-focused website</p>
+            </div>
+          </article>
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials" aria-label="Client testimonials">
+      <div class="container">
+        <h2 class="section-title">What clients say</h2>
+
+        <div class="testimonial-slider" aria-roledescription="carousel" aria-label="Testimonials" data-autoplay="true">
+          <div class="slides" id="testimonial-slides">
+            <blockquote class="slide">
+              <p>"Waamara transformed our brand and increased conversion by 32%. Their clarity and craft are exceptional."</p>
+              <footer>— Priya S., Product Lead</footer>
+            </blockquote>
+
+            <blockquote class="slide">
+              <p>"Fast, reliable, and thoughtful. The team shipped a beautiful site that performs beautifully."</p>
+              <footer>— Marco F., Founder</footer>
+            </blockquote>
+
+            <blockquote class="slide">
+              <p>"They listened, iterated, and delivered on time. Highly recommended for startups."</p>
+              <footer>— Amina K., CEO</footer>
+            </blockquote>
+          </div>
+
+          <div class="slider-controls">
+            <button class="btn icon-btn" id="prev-slide" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="dots" id="slider-dots" role="tablist" aria-label="Testimonial pages"></div>
+            <button class="btn icon-btn" id="next-slide" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-label="Contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Let's work together</h2>
+          <p>Tell us about your project. We'll get back with a plan and estimate.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-envelope"></i> hello@waamaradesign.com</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (555) 987-6543</li>
+            <li><i class="fa-solid fa-location-dot"></i> Remote — Worldwide</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="#" aria-label="Contact form">
+          <label>
+            <span class="sr-only">Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Email address" required>
+          </label>
+
+          <label>
+            <span class="sr-only">Message</span>
+            <textarea name="message" rows="6" placeholder="Tell us about your project" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Waamara Design — Crafted with care</p>
+      <ul class="social">
+        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>
+      .mobile-only { display:none; }
+    </style>
+  </noscript>
+</body>
+</html>
