@@ -1,27 +1,118 @@
-# Waamara Design - Creative Solutions Website
-
-A high-performance, responsive landing page for a creative design agency. Featuring a modern UI, dark/light mode, portfolio filtering, and a functional testimonial slider.
-
-## 🚀 Features
-- **Modern UI/UX**: Designed with a focus on typography and clean aesthetics.
-- **Dark/Light Mode**: Seamless theme switching with persistent CSS variables.
-- **Dynamic Portfolio**: Interactive filtering based on project categories.
-- **Fully Responsive**: Optimized for mobile, tablet, and desktop using CSS Grid and Flexbox.
-- **Smooth Navigation**: Anchor link scrolling and mobile drawer menu.
-- **Accessible**: Integrated ARIA labels and semantic HTML5.
-
-## 🛠️ Technologies Used
-- **HTML5**: Semantic structure.
-- **CSS3**: Custom properties (variables), Grid, Flexbox, and Keyframe animations.
-- **JavaScript (ES6)**: DOM manipulation and event-driven interactivity.
-- **Font Awesome**: Scalable vector icons.
-- **Google Fonts**: Montserrat (Headings) and Poppins (Body).
-
-## 📂 Project Structure
-```text
-/waamara-design
+heroo-logistics/
 │
-├── index.html      # Main website structure
-├── style.css       # Global styles and design system
-├── script.js       # Interactivity and UI logic
-└── assets/         # Images and icons
+├── index.html                    # Single file – All-in-One
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── database.js
+│   │   │   ├── jwt.js
+│   │   │   ├── logger.js
+│   │   │   ├── upload.js
+│   │   │   └── socket.js
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── errorHandler.js
+│   │   │   ├── validator.js
+│   │   │   └── rateLimiter.js
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Truck.js
+│   │   │   ├── Booking.js
+│   │   │   ├── Wheat.js
+│   │   │   └── Tracking.js
+│   │   ├── routes/
+│   │   │   ├── auth.js
+│   │   │   ├── trucks.js
+│   │   │   ├── bookings.js
+│   │   │   ├── wheat.js
+│   │   │   ├── tracking.js
+│   │   │   ├── payment.js
+│   │   │   ├── admin.js
+│   │   │   └── upload.js
+│   │   ├── services/
+│   │   │   ├── paymentService.js
+│   │   │   └── emailService.js
+│   │   ├── app.js
+│   │   └── server.js
+│   ├── uploads/
+│   ├── logs/
+│   ├── .env.example
+│   ├── Dockerfile
+│   ├── package.json
+│   └── ecosystem.config.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── axiosConfig.js
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├── Footer.jsx
+│   │   │   │   └── LanguageSwitcher.jsx
+│   │   │   ├── AIAssistant.jsx
+│   │   │   ├── ImageUpload.jsx
+│   │   │   ├── TrackingMap.jsx
+│   │   │   └── ...
+│   │   ├── contexts/
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── ThemeContext.jsx
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   ├── useSocket.js
+│   │   │   └── useToast.js
+│   │   ├── locales/
+│   │   │   ├── en/translation.json
+│   │   │   ├── om/translation.json
+│   │   │   └── am/translation.json
+│   │   ├── pages/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Trucks.jsx
+│   │   │   ├── Bookings.jsx
+│   │   │   ├── Wheat.jsx
+│   │   │   ├── Tracking.jsx
+│   │   │   ├── Driver.jsx
+│   │   │   └── Admin.jsx
+│   │   ├── utils/
+│   │   │   └── helpers.js
+│   │   ├── i18n.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── manifest.json
+│   │   └── favicon.ico
+│   ├── .env.example
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── package.json
+│
+├── database/
+│   └── schema.sql
+│
+├── nginx/
+│   └── nginx.conf
+│
+├── scripts/
+│   ├── deploy.sh
+│   ├── backup.sh
+│   ├── monitor.sh
+│   └── setup-ssl.sh
+│
+├── .github/workflows/
+│   ├── deploy.yml
+│   └── test.yml
+│
+├── docker-compose.yml
+├── docker-compose.prod.yml
+├── .env.example
+├── .gitignore
+├── README.md
+└── LICENSE
